@@ -8,9 +8,9 @@ image-version: latest
 
 modules:
   - type: script
-    snippets:
-      - "rm -f /etc/profile.d/90-bluefin-starship.sh"
-      - "rm -f /usr/bin/starship"
+    scripts:
+      - disable-extensions.sh
+      - remove-starship.sh
 
   - type: dnf
     remove:
@@ -19,7 +19,4 @@ modules:
         - fish
         - tmux
         - zsh
-  - type: systemd
-    system:
-      disabled:
-        - tailscaled.service
+        - glow
