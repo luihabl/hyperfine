@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: hyperfine
-description: My slightly simplified version of bluefin.
+description: my slightly simplified version of bluefin.
 
 base-image: ghcr.io/ublue-os/bluefin-nvidia-open
 image-version: latest
@@ -20,3 +20,13 @@ modules:
         - tmux
         - zsh
         - glow
+
+  - type: os-release
+    properties:
+      ID: hyperfine
+      ID_LIKE: fedora
+      DEFAULT_HOSTNAME: hyperfine
+      IMAGE_ID: hyperfine
+      PRETTY_NAME: Hyperfine (${VERSION:-00.00000000})
+
+  - type: signing
