@@ -11,6 +11,7 @@ modules:
     scripts:
       - disable-extensions.sh
       - remove-starship.sh
+      - image-info.sh
 
   - type: dnf
     remove:
@@ -20,13 +21,5 @@ modules:
         - tmux
         - zsh
         - glow
-
-  - type: os-release
-    properties:
-      ID: hyperfine
-      ID_LIKE: fedora
-      DEFAULT_HOSTNAME: hyperfine
-      IMAGE_ID: hyperfine
-      PRETTY_NAME: Hyperfine (${VERSION:-00.00000000})
 
   - type: signing
