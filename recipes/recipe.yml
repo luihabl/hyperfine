@@ -29,6 +29,5 @@ modules:
       - GSConnect
       - Logo Menu
       - Search Light
-      - Window List
 
   - from-file: post-build.yaml
