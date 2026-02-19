@@ -24,7 +24,7 @@ modules:
     uninstall:
       - Blur my Shell
       - AppIndicator and KStatusNotifierItem Support
-      - Caffeinate
+      - Caffeine
       - Dash to Dock
       - GSConnect
       - Logo Menu
