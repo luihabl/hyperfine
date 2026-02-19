@@ -7,7 +7,7 @@ modules:
   - type: os-release
     properties:
       NAME: hyperfine
-      PRETTY_NAME: Hyperfine $OS_VERSION
+      PRETTY_NAME: Hyperfine
       ID: hyperfine
       DEFAULT_HOSTNAME: hyperfine
 
