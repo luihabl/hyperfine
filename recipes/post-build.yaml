@@ -1,0 +1,16 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/module-list-v1.json
+
+modules:
+  - type: signing
+
+  - type: os-release
+    properties:
+      NAME: hyperfine
+      PRETTY_NAME: Hyperfine $OS_VERSION
+      ID: hyperfine
+      DEFAULT_HOSTNAME: hyperfine
+
+  - type: initramfs
+    env:
+      DRACUT_NO_XATTR: "1"

@@ -9,7 +9,6 @@ image-version: latest
 modules:
   - type: script
     scripts:
-      - disable-extensions.sh
       - remove-starship.sh
 
   - type: dnf
@@ -21,13 +20,15 @@ modules:
         - zsh
         - glow
 
-  - type: os-release
-    properties:
-      NAME: hyperfine
-      PRETTY_NAME: Hyperfine [$OS_VERSION]
-      ID: hyperfine
-      DEFAULT_HOSTNAME: hyperfine
+  - type: gnome-extensions
+    uninstall:
+      - Blur my Shell
+      - AppIndicator and KStatusNotifierItem Support
+      - Caffeinate
+      - Dash to Dock
+      - GSConnect
+      - Logo Menu
+      - Search Light
+      - Window List
 
-  - type: initramfs
-
-  - type: signing
+  - from-file: post-build.yaml
