@@ -11,7 +11,6 @@ modules:
     scripts:
       - disable-extensions.sh
       - remove-starship.sh
-      - image-info.sh
 
   - type: dnf
     remove:
@@ -21,5 +20,14 @@ modules:
         - tmux
         - zsh
         - glow
+
+  - type: os-release
+    properties:
+      NAME: hyperfine
+      PRETTY_NAME: Hyperfine [$OS_VERSION]
+      ID: hyperfine
+      DEFAULT_HOSTNAME: hyperfine
+
+  - type: initramfs
 
   - type: signing
