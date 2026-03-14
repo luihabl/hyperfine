@@ -4,7 +4,7 @@ name: hyperfine
 description: my slightly simplified version of bluefin.
 
 base-image: ghcr.io/ublue-os/bluefin-nvidia-open
-image-version: latest
+image-version: stable
 
 modules:
   - type: script
